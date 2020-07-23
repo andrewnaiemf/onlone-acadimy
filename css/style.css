@@ -1,0 +1,307 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Segoe 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+/********************************************start navbar**************************************************/
+.navbar ul{
+    margin: 0 auto;
+}
+ .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+    background-color: transparent;  
+}
+
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:after{
+
+content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    transform: scaleX(1);
+}
+
+
+.navbar .dropdown-menu{
+    margin-top: 12px !important;
+}
+/********************************************end navbar**************************************************/
+/******************************************start  header*************************************************/
+
+
+.header {
+    position: relative;
+  }
+  
+  /* Add some content at the bottom of the video/page */
+  .banner-text {
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+
+  @media (max-width: 992px) {
+      .header{
+          font-size: 7pt;
+        
+      }
+      .banner-text{
+          width: 85%;
+      }
+
+   }
+   @media(max-width:828px){
+       .banner-text{
+           width: 95%;
+           
+       }
+       .banner-text #typed-strings,#typed{
+           font-size: 3em !important;
+       }
+   }
+   @media (max-width: 576px) {
+       .banner-text{
+            top: 25%;
+            padding: 0;
+       }
+       
+    }
+    @media(max-width:414px){
+        .banner-text #typed-string,#typed{
+            font-size: 2em !important;
+        }
+    }
+
+
+  /*-- banner-text --*/  
+
+.agile_banner_info {
+    width: 79%;
+    margin: 0 0 0 auto;
+    padding: 3em;
+    border: 2px solid #fff;
+    border-left: none;
+    position: relative;
+}
+.agile_banner_info:after,.agile_banner_info:before{
+	width:2px;
+	height:20px;
+	background:#fff;
+	position:absolute;
+	left:0%;
+	content:'';
+}
+.agile_banner_info:after{
+	top:0%;
+}
+.agile_banner_info:before{
+	bottom:0%;
+}
+.agile_banner_info1{
+	margin-left:-8em;
+}
+.agile_banner_info h6 {
+    font-size: .9em;
+    color: #fff;
+    line-height: 1.5em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
+}
+#typed {
+    font-size: 5em;
+    color: #fff;
+    text-transform: capitalize;
+    line-height: 1.5em;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 100;
+}
+#typed i{
+	font-style:normal;
+	color:#F44336;
+    font-weight:600;
+    font-family: 'Pacifico';
+}
+.banner_agile_para p{
+	color: #fff;
+    margin: 2em 0 0 7em;
+    line-height: 2em;
+    font-family: 'Josefin Slab', serif;
+}
+/*-- code for animated blinking cursor --*/
+.typed-cursor{
+	opacity: 1;
+    font-weight: 300;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    -ms-animation: blink 0.7s infinite;
+    -o-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+    color: #fff;
+    font-size: 2.5em;
+}
+@-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-moz-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-ms-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-o-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+  
+/********************************************end  header**************************************************/
+/********************************************start  cards*************************************************/
+.cards .card{
+    border: none !important;
+    text-align: center;
+    margin-top: -110px;
+    border-radius: 0 0 50px 0px !important;
+}
+
+.cards .card .card-up .avatar{
+    text-align: center;
+    padding: 50px;
+    
+}
+.cards .card .card-up .avatar img{
+    border: 2px solid;
+    border-radius: 50%;
+    box-shadow:-1px 2px 12px 0px rgba(0,0,0,0.75);
+    transition: transform .8s linear;
+    cursor: pointer; 
+}
+.cards .card .card-up .avatar img:hover {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+.cards .card .card-up span{
+    display: block;
+    padding-top: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20pt;
+}
+.cards .card .card-body{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    word-spacing: 2pt;
+    letter-spacing: 1px;
+}
+.cards .card button{
+    border: none;
+    background-color: unset;
+    padding: 10px;
+    word-spacing: 2pt;
+    letter-spacing: 1px;
+}
+
+.cards .card .f-body{
+    border-radius:  50px 0px !important;
+    border-bottom: 2px solid #6987c9;
+}
+.cards .card .s-body{
+    border-radius:  50px 0px !important;
+    border-bottom: 2px solid #dea1ff;
+}
+.cards .card .t-body{
+    border-radius:  50px 0px !important;
+    border-bottom: 2px solid #f7c74c;
+}
+@media(min-width:760px){
+    .cards .s-card{
+        margin-top: 80px;
+    }
+}
+
+
+ @media (max-width: 760px) { 
+    .cards .card{
+        margin-top: 0;
+    }
+    .cards .f-card{
+        margin-top: -60px;
+    }
+    
+}
+@media(max-width:576px){
+    .f-card{
+        margin-top: -30px !important;
+    }
+}
+
+
+/********************************************end  cards**************************************************/
+/***************************************strat  courses-paragraph*****************************************/
+.courses-p{
+    padding: 100px 0 ;
+}
+.courses-p .container-fluid .title p{
+    color: #0082fa;
+    font-family: 'Josefin Slab', serif;
+    font-size: larger;
+    padding: 20px 0;
+}
+.courses-p .container-fluid .title h1{
+    font-weight: 900;
+    padding: 30px 0;
+}
+.courses-p .row ,.courses-p a{
+    color: #6b6b6b;
+    padding: 10px 0;
+}
+.courses-p .row p{
+    word-spacing: 1pt;
+    letter-spacing: 1pt;
+}
+/***************************************end  courses-paragraph*****************************************/
+
